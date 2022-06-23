@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ac990846d0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+
+
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+    <style>
+        .LeftBarCont
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .statusGreen
+        {
+            font-size: 10px;
+            color: green;
+            margin-right: 5px;
+        }
+        .statusRed
+        {
+            font-size: 10px;
+            color: red;
+            margin-right: 5px;
+        }
+        .rightSideSensorName
+        {
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+        .goto3d
+        {
+            margin-left: 5px;
+
+        }
+        .goto3d:hover
+        {
+            color: rgb(74, 194, 250);
+            cursor: pointer;
+        }
+        .goto3d:active
+        {
+            color: rgb(40, 168, 228);
+            cursor: pointer;
+            
+        }
+        .idTag
+        {
+            color: rgb(179, 179, 179);
+            font-size: 13px;
+        }
+        .closeRightCont{text-align: right;}
+        .closeRight
+        {
+           
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+        .closeRight:hover
+        {
+            color: rgb(74, 194, 250);
+            cursor: pointer;
+        }
+        .closeRight:active
+        {
+            color: rgb(40, 168, 228);
+            cursor: pointer;
+            
+        }
+        .seperatorHorizontal
+        {
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid rgb(184, 184, 184);
+margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10"><div> <span class="statusGreen"><i class="fas fa-circle"></i></span><span class="rightSideSensorName">Sensor 1</span><i class="fas fa-eye goto3d"></i></div> <div class="idTag">id: 46546546</div></div>
+            <div class="col-2 closeRightCont"><i class="fas fa-arrow-right closeRight"></i></div>
+        </div>
+    </div>
+    <div class="LeftBarCont">
+
+        <div>31 °C</div>
+        <canvas id="foo"></canvas>
+        <div>Average Temperature</div>
+        <div class="seperatorHorizontal"></div>
+        <div>Temperature [°C]</div>
+        <div id="chartContainer" style="height: 370px; width:100%;"></div>
+        <div class="seperatorHorizontal"></div>
+        <div>Asset Management Data</div>
+        
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th>Firstname</th>
+                <th>Department</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Maintainance</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Contractor</td>
+                <td>mary@example.com</td>
+              </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

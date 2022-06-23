@@ -1,0 +1,58 @@
+.viewerWindowCont
+{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.viewerWindow
+{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.headerContainer
+{
+    height: 5%;
+    background-color: rgb(138, 138, 138);
+}
+.bodyContainer{
+    height: 95%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.containerOf0
+{
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+  
+}
+.containerOf1
+{
+    background-color: rgb(240, 240, 240);
+    padding: 0px;
+}
+.containerOf2
+{
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+}
+.containerOf3
+{
+    background-color:  rgb(255, 255, 255);
+    padding: 0px;
+    overflow-x: hidden;
+}
+.PageContainer{
+    height: 100vh;
+    padding: 0px;
+}
+.leftHandSideContainer
+{
+    height: 100%;
+}
+.navBarApp{width: 100%;
+padding-left: 30px;
+}

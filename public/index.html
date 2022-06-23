@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logoNav.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ac990846d0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <title>TEA Serv DigitalTwin</title>
+    <style>
+      body
+      {
+        overflow-y: hidden;       
+        overflow-x: hidden; 
+      }
+    </style>
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div >sdfsfs</div>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+    </div>
+    <div id="root"></div>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/cityDT.json");
+    </script>
+    
+
+     <script>
+      // window.onload = function () {
+      
+      // var dps = []; // dataPoints
+      // var chart = new CanvasJS.Chart("chartContainer", {
+      //     title :{
+      //         text: ""
+      //     },
+      //     data: [{
+      //         type: "line",
+      //         dataPoints: dps
+      //     }]
+      // });
+      
+      // var xVal = 0;
+      // var yVal = 31; 
+      // var updateInterval = 1000;
+      // var dataLength = 20; // number of dataPoints visible at any point
+      
+      
+      // var updateChart = function (count) {
+      
+      //     count = count || 1;
+      
+      //     for (var j = 0; j < count; j++) {
+      //         yVal = yVal +  Math.round(0.75+ Math.random() *(-1.5));
+      //         dps.push({
+      //             x: xVal,
+      //             y: yVal
+      //         });
+      //         xVal++;
+      //     }
+      
+      //     if (dps.length > dataLength) {
+      //         dps.shift();
+      //     }
+      
+      //     chart.render();
+      // };
+      
+      // updateChart(dataLength);
+      // setInterval(function(){updateChart()}, updateInterval);
+      
+      // }
+      // setTimeout(name, 1000);
+      // function name() {
+      //     var ss = document.getElementsByClassName("canvasjs-chart-credit");
+      //     console.log(ss);
+      //     for (let i = 0; i < ss.length; i++) {
+      //       ss[i].style.display = "none";
+            
+      //     }
+          
+      // }
+      </script>
+
+
+
+  </body>
+</html>

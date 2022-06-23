@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ac990846d0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+
+    <style>
+        .sideListBarExternal
+        {
+            overflow-x:hidden;
+            overflow-y: hidden;
+            padding-top: 20px;
+        }
+        .sideListBarInternalCont
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            
+        }
+        .sensorsCardCont
+        {
+            display: flex;
+            
+           
+            flex-direction: column;
+            width: 100%;
+            height: calc(100vh - 150px);
+            overflow-y: scroll;
+            overflow-x: hidden;
+            
+            
+        }
+        .sideListBarCard
+        {
+            min-width: 200px;
+            display: inline-block;
+            width: 80%;
+            height: 80px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background: rgb(236, 236, 236);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .sideListBarCard:hover
+        {
+            background: rgb(231, 250, 248);
+            cursor: pointer;
+
+        }
+        .sideListBarCard:active
+        {
+            background: rgb(220, 238, 236);
+            border: 2px solid black;
+            
+
+        }
+        .ActivatedsideListBarCard
+        {
+            background: rgb(231, 250, 248);
+            border: 2px solid black;
+
+
+        }
+        .cardContentRow
+        {
+            height: 100%;
+        }
+        .cardLeftSide
+        {
+            display: inline-block;
+            height: 100%;
+        }
+        .cardRightSide
+        {
+            font-weight: 500;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            border-left: 1px solid black;
+
+        }
+        .SensorName
+        {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            
+        }
+        .SensorID
+        {
+            display: block;
+            color: rgb(184, 184, 184);
+        }
+        .statusGreen
+        {
+            font-size: 10px;
+            color: green;
+            margin-right: 5px;
+        }
+        .statusRed
+        {
+            font-size: 10px;
+            color: red;
+            margin-right: 5px;
+        }
+        .sideListBarTitle
+        {
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 20px;
+            white-space: nowrap;
+           
+            
+        }
+        .SearchBox
+        {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            width: 80%;
+            min-width: 200px;
+        }
+
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(250, 250, 250);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(71, 71, 71);
+  border-radius: 20px;
+
+}
+
+.backBtn
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+.backBtn:hover
+{
+color: rgb(59, 200, 255);
+cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="sideListBarExternal">
+
+    <div class="container-fluid"> 
+        <div class="row">
+
+            <div class="col-11">
+                <div class="sideListBarTitle">Temperature Sensors</div>
+            </div>
+            <!-- <i class="col-1 fas fa-arrow-left"></i> -->
+            <div class="col-1 backBtn"><div>
+                <i class="fas fa-arrow-left"></i>
+            </div></div>
+        </div>
+    </div>
+    
+    <div class="sideListBarInternalCont">
+        <input type="text" class="form-control SearchBox" id="dummyBox" placeholder="Search" name="searchBox" disabled>
+    <div class="sensorsCardCont">
+        <div class="sideListBarCard container-fluid">
+            <div class="row cardContentRow">
+                <div class="col-8 cardLeftSide" >
+                    <div><span class="SensorName"><span class="statusGreen"><i class="fas fa-circle"></i></span>Sensor 1</span></div>
+                    <div><span class="SensorID">id: asdafasas</span></div>
+                </div>
+                <div class="col-4 cardRightSide">
+                <div>55 °C</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sideListBarCard container-fluid">
+            <div class="row cardContentRow">
+                <div class="col-8 cardLeftSide" >
+                    <div><span class="SensorName"><span class="statusRed"><i class="fas fa-circle"></i></span>Sensor 1</span></div>
+                    <div><span class="SensorID">id: asdafasas</span></div>
+                </div>
+                <div class="col-4 cardRightSide">
+                <div>55 °C</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sideListBarCard container-fluid ActivatedsideListBarCard">
+            <div class="row cardContentRow">
+                <div class="col-8 cardLeftSide" >
+                    <div><span class="SensorName"><span class="statusGreen"><i class="fas fa-circle"></i></span>Sensor 1</span></div>
+                    <div><span class="SensorID">id: asdafasas</span></div>
+                </div>
+                <div class="col-4 cardRightSide">
+                <div>55 °C</div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+        
+    
+        
+    
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
